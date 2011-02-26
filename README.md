@@ -43,7 +43,7 @@ concurrency support in the context of clojush's reliance on garbage
 collection. For example, you might want to provide arguments such as
 -Xmx2000m and -XX:+UseParallelGC.
 
-DESCRIPTION
+# DESCRIPTION
 
 Clojush is a version of the Push programming language for evolutionary
 computation, and the PushGP genetic programming system, implemented in
@@ -86,7 +86,7 @@ automatic program simplification. Clojush can serve as the foundation
 for other evolutionary algorithms, but only the core Push interpreter
 and a version of PushGP are provided here.
 
-USAGE
+# USAGE
 
 Loading clojush.clj as distributed should load everything and print the
 list of registered Push instructions. Example calls to PushGP are
@@ -100,7 +100,7 @@ to the pushgp function. Here is a simple example of a call to run-push,
 adding 1 and 2 and returning the top of the integer stack in the
 resulting interpreter state:
 
-(top-item :integer (run-push '(1 2 integer\_add) (make-push-state)))
+	  (top-item :integer (run-push '(1 2 integer\_add) (make-push-state)))
 
 To try this paste it below all of the code in clojush.clj and load the
 file in the Clojure REPL, or alternatively load clojush.clj as-is, then
@@ -235,7 +235,7 @@ hand).
 If you've read this far then the best way to go further is probably to
 read and run the examples.
 
-IMPLEMENTATION NOTES
+# IMPLEMENTATION NOTES
 
 A Push interpreter state is represented here as a Clojure map that maps
 type names (keywords) to stacks (lists, with the top items listed
@@ -400,7 +400,7 @@ tournament-size parameter is still used for subsequent selection from
 the decimated population. Any specified trivial geography applies both
 to decimation and to subsequent selection.
 
-ACKNOWLEDGEMENTS
+# ACKNOWLEDGEMENTS
 
 This material is based upon work supported by the National Science
 Foundation under Grant No. 1017817. Any opinions, findings, and
