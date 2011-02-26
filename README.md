@@ -10,7 +10,7 @@ implementation takes advantage of Clojure's facilities for multi-core
 concurrency. Use Java's -XX:+UseParallelGC option to take maximum
 advantage of this feature.
 
-REQUIREMENTS
+# REQUIREMENTS
 
 To use this code you must have a Clojure programming environment; see
 http://clojure.org/. The current version of clojush requires clojure 1.2
@@ -20,7 +20,7 @@ Clojure is available for most OS platforms. Good starting points for
 obtaining and using Clojure include http://clojure.org/getting\_started
 and http://www.assembla.com/wiki/show/clojure/Getting\_Started.
 
-QUICKSTART
+# QUICKSTART
 
 To run the system on a simple example start a clojure REPL (read,
 evaluate, print loop) in the directory that contains clojush.clj and the
