@@ -143,6 +143,7 @@ it may not, since it may be a large and/or looping program, and since
 the default evaluation limit is pretty low) and it returns the internal
 representation of the resulting interpreter state:
 
+
 	       (let [s (make-push-state) c (random-code 100 ;; size limit of 100 points
 	       (concat @registered-instructions ;; all registered instrs (list (fn []
 	       (rand-int 100)) ;; random integers from 0-99 (fn [] (rand)))))] ;;
