@@ -112,8 +112,7 @@ third argument of true to run-push. This will cause a representation of
 the interpreter state to be printed at the start of execution and after
 each step. Here is the same example as above but with each step printed:
 
-(top-item :integer (run-push '(1 2 integer\_add) (make-push-state)
-true))
+     (top-item :integer (run-push '(1 2 integer\_add) (make-push-state) true))
 
 See the "parameters" section of the code for some parameters that will
 affect execution, e.g. whether code is pushed onto and/or popped off of
@@ -144,11 +143,11 @@ it may not, since it may be a large and/or looping program, and since
 the default evaluation limit is pretty low) and it returns the internal
 representation of the resulting interpreter state:
 
-(let [s (make-push-state) c (random-code 100 ;; size limit of 100 points
-(concat @registered-instructions ;; all registered instrs (list (fn []
-(rand-int 100)) ;; random integers from 0-99 (fn [] (rand)))))] ;;
-random floats from 0.0-1.0 (printf "\n\nCode: %s\n\n" (apply list c))
-(run-push c s))
+	       (let [s (make-push-state) c (random-code 100 ;; size limit of 100 points
+	       (concat @registered-instructions ;; all registered instrs (list (fn []
+	       (rand-int 100)) ;; random integers from 0-99 (fn [] (rand)))))] ;;
+	       random floats from 0.0-1.0 (printf "\n\nCode: %s\n\n" (apply list c))
+	       (run-push c s))	      
 
 If you look at the resulting interpreter state you will see an
 "auxiliary" stack that is not mentioned in any of the Push publications.
